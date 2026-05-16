@@ -1,5 +1,13 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { User } from '../schema';
+export type UserRole = 'admin' | 'sales';
+export interface User {
+  _id: string;
+  name: string;
+  email: string;
+  role: UserRole;
+  token?: string;
+}
+
 import api from '../api/axios';
 
 interface AuthContextType {

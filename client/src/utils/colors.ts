@@ -1,5 +1,6 @@
 import React from 'react';
-import { LeadStatus } from '../schema';
+export type LeadStatus = 'New' | 'Contacted' | 'Qualified' | 'Lost';
+
 
 export const getStatusColor = (status: LeadStatus) => {
   switch (status) {

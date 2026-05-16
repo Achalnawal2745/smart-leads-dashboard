@@ -1,17 +1,17 @@
 export type UserRole = 'admin' | 'sales';
 
-export interface User {
+export type User = {
   _id: string;
   name: string;
   email: string;
   role: UserRole;
   token?: string;
-}
+};
 
 export type LeadStatus = 'New' | 'Contacted' | 'Qualified' | 'Lost';
 export type LeadSource = 'Website' | 'Instagram' | 'Referral';
 
-export interface Lead {
+export type Lead = {
   _id: string;
   name: string;
   email: string;
@@ -19,17 +19,17 @@ export interface Lead {
   source: LeadSource;
   createdAt: string;
   updatedAt: string;
-}
+};
 
-export interface Pagination {
+export type Pagination = {
   total: number;
   page: number;
   pages: number;
-}
+};
 
-export interface LeadsResponse {
+export type LeadsResponse = {
   success: boolean;
   count: number;
   pagination: Pagination;
   data: Lead[];
-}
+};

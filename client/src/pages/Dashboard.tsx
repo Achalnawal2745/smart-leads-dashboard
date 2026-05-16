@@ -5,7 +5,32 @@ import LeadsTable from '../components/leads/LeadsTable';
 import LeadsFilter from '../components/leads/LeadsFilter';
 import LeadForm from '../components/leads/LeadForm';
 import api from '../api/axios';
-import { Lead, LeadsResponse, Pagination } from '../schema';
+export type LeadStatus = 'New' | 'Contacted' | 'Qualified' | 'Lost';
+export type LeadSource = 'Website' | 'Instagram' | 'Referral';
+
+export interface Lead {
+  _id: string;
+  name: string;
+  email: string;
+  status: LeadStatus;
+  source: LeadSource;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface Pagination {
+  total: number;
+  page: number;
+  pages: number;
+}
+
+export interface LeadsResponse {
+  success: boolean;
+  count: number;
+  pagination: Pagination;
+  data: Lead[];
+}
+
 import { useDebounce } from '../hooks/useDebounce';
 import { ChevronLeft, ChevronRight, Loader2, Users } from 'lucide-react';
 

@@ -1,5 +1,15 @@
 import React from 'react';
-import { Lead, UserRole } from '../../schema';
+export type UserRole = 'admin' | 'sales';
+export interface Lead {
+  _id: string;
+  name: string;
+  email: string;
+  status: 'New' | 'Contacted' | 'Qualified' | 'Lost';
+  source: 'Website' | 'Instagram' | 'Referral';
+  createdAt: string;
+  updatedAt: string;
+}
+
 import { getStatusColor, getSourceColor } from '../../utils/colors';
 import { format } from 'date-fns';
 import { Edit2, Trash2, ExternalLink } from 'lucide-react';
