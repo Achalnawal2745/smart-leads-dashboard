@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
-import { Lead, LeadStatus, LeadSource } from '../../types';
+import { Lead, LeadStatus, LeadSource } from '../../schema';
 import { X } from 'lucide-react';
 
 const leadSchema = z.object({

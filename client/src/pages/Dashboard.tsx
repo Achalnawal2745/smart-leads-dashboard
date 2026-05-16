@@ -5,7 +5,7 @@ import LeadsTable from '../components/leads/LeadsTable';
 import LeadsFilter from '../components/leads/LeadsFilter';
 import LeadForm from '../components/leads/LeadForm';
 import api from '../api/axios';
-import { Lead, LeadsResponse, Pagination } from '../types';
+import { Lead, LeadsResponse, Pagination } from '../schema';
 import { useDebounce } from '../hooks/useDebounce';
 import { ChevronLeft, ChevronRight, Loader2, Users } from 'lucide-react';
 

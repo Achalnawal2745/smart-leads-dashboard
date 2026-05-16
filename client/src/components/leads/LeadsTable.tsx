@@ -1,5 +1,5 @@
 import React from 'react';
-import { Lead, UserRole } from '../../types';
+import { Lead, UserRole } from '../../schema';
 import { getStatusColor, getSourceColor } from '../../utils/colors';
 import { format } from 'date-fns';
 import { Edit2, Trash2, ExternalLink } from 'lucide-react';

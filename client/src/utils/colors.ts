@@ -1,5 +1,5 @@
 import React from 'react';
-import { LeadStatus } from '../types';
+import { LeadStatus } from '../schema';
 
 export const getStatusColor = (status: LeadStatus) => {
   switch (status) {
